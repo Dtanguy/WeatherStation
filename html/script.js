@@ -1,14 +1,25 @@
 ﻿/* Varable globale */
-var horloge_timeout;
 var meteo_timeout;
+var horloge_timeout;
 var ping_timeout;
 var xplanet_timeout;
 var station_url = 'http://192.168.1.9:8085';
 
 
-/************************************************************/
-/************************* Horloge **************************/
-/************************************************************/
+//xplanet
+function xplanet () {
+  var now = new Date().getTime();
+  
+  // préchargement des images
+  var img_moon  = $("<img />").attr("src", "xplanet/xplanet_moon.jpg?"+now);
+  // affichage des nouvelles images à l'écran
+  $("#img_moon").attr("src", "xplanet/xplanet_moon.jpg?"+now);
+  
+  ping_timeout = setTimeout("xplanet()", 60000);    
+}
+
+
+//Horloge
 var dows  = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
 var mois2  = ["janv", "f&eacute;v", "mars", "avril", "mai", "juin", "juillet", "ao&ucirc;t", "sept", "oct", "nov", "d&eacute;c"];
 function horloge() {
@@ -35,35 +46,7 @@ function horloge() {
 }
 
 
-/************************************************************/
-/************************** Meteo ***************************/
-/************************************************************/
-/*function meteo(){	
-	meteo_timeout = setTimeout("meteo()", 10000);
-}*/
-
-/************************************************************/
-/************************* xplanet **************************/
-/************************************************************/
-function xplanet () {	
-
-  var now = new Date().getTime();
-
-  /* préchargement des images */
-  //var img_earth = $("<img />").attr("src", "xplanet/xplanet_earth.jpg?"+now);
-  var img_moon  = $("<img />").attr("src", "xplanet/xplanet_moon.jpg?"+now);
-
-  /* affichage des nouvelles images à l'écran */
-  //$("#img_earth").attr("src", "xplanet/xplanet_earth.jpg?"+now);
-  $("#img_moon").attr("src", "xplanet/xplanet_moon.jpg?"+now);
-  
-  ping_timeout = setTimeout("xplanet()", 60000);
-    
-}
-
-/************************************************************/
-/*************************** Ping ***************************/
-/************************************************************/
+// Update
 var forecastJSON = '';
 function update() {
 		
@@ -134,10 +117,6 @@ function update() {
 
 var mesure = [];
 var mesure2 = [];
-
-
-
-
 function drwSegment(startx,pas,val1,val2,maxV,minV,maxX,maxY,color,add,lineSize,context){		
 	
 	var y1 = maxY - ((val1-minV)/maxV)*maxY;
@@ -170,7 +149,6 @@ function drwSegment(startx,pas,val1,val2,maxV,minV,maxX,maxY,color,add,lineSize,
 	context.strokeStyle = color;
 	context.quadraticCurveTo(x1,y1,x2,y2);	
 	context.stroke();	
-	
 }
 
 

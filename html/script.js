@@ -75,11 +75,11 @@ function update() {
 		$("#ping").css('color', 'green');  
 	  //}
 	  
-	  if (JSON.stringify(forecastJSON) != JSON.stringify(data.forecastJSON)){
+	  //if (JSON.stringify(forecastJSON) != JSON.stringify(data.forecastJSON)){
 		  console.log(data.forecastJSON);
 		  forecastJSON = data.forecastJSON;
 		  initPrev();
-	  }
+	  //}
 	  
 	  //data.wifi_strength;	  
 	  //data.ping;		
@@ -207,7 +207,7 @@ function initPrev() {
 		
 		var now = new Date;
 		var dayID = now.getDay()+1;	
-		var lasth = 25;
+		var lasth = 12;
 		
 		var last = 7;
 		var last2 = 7;
@@ -218,7 +218,7 @@ function initPrev() {
 			var time = forecastJSON.list[i].dt_txt.split(" ")[1].split(":");			
 			var start = 50;
 			//Haut
-			if (time[0] == 0){
+			if (time[0] < lasth){
 				context.beginPath();
 				context.fillStyle = 'white';	
 				context.font="bold "+30+"px Verdana";

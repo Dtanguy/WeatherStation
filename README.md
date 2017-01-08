@@ -8,11 +8,11 @@ A 3D printed weather station, based on rpi2 and nodeMCU.<br>
 </p>
 <br>
 
-<br>
+<!--<br>
 <p align="center">
 	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/p2.png">
 </p>
-<br>
+<br>-->
 
 #Hardware :
 Material used for the station :

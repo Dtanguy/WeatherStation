@@ -14,13 +14,6 @@ A 3D printed weather station, based on rpi2 and nodeMCU.<br>
 </p>
 <br>
 
-I have start this project using the code from http://www.magdiblog.fr/boa-pi-homedashscreen/1-raspberry-pi-home-dash-screen/
-<br>Witch provide a nice looking RPI dash Screen. 
-<br>I have progressively remplace all his code by my for feet to my hardware, use node.js instahead of PHP, 
-add a wireless data sensor, change the look (using materializ)
-and use weather data from free API (https://openweathermap.org/api) instahead of web widget, 
-
-
 #Hardware :
 Material used for the station :
 <br>

@@ -1,0 +1,34 @@
+{
+  "name": "meteo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "net-ping": "^1.2.0",
+    "node-schedule": "^1.2.0",
+    "serialport": "^4.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dtanguy/WeatherStation.git"
+  },
+  "keywords": [
+    "Weather",
+    "Station",
+    "Meteo",
+    "RPI",
+    "nodeMCU",
+    "3D",
+    "printed"
+  ],
+  "author": "DEMME Tanguy",
+  "license": "CC-BY-NC-SA-3.0",
+  "bugs": {
+    "url": "https://github.com/Dtanguy/WeatherStation/issues"
+  },
+  "homepage": "https://github.com/Dtanguy/WeatherStation#readme"
+}

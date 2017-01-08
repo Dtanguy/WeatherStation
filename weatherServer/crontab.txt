@@ -1,0 +1,3 @@
+@reboot    /home/pi/weatherServer/init.sh
+0 22 * * *     /home/pi/weatherServer/veille.sh
+0 7 * * *     /home/pi/weatherServer/veille.sh

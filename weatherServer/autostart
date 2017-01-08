@@ -1,0 +1,13 @@
+#@lxpanel --profile LXDE-pi
+#@pcmanfm --desktop --profile LXDE-pi
+#@xscreensaver -no-splash
+
+@xset s off
+@xset -dpms
+@xset s noblank
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xscreensaver -no-splash
+
+@forever start /home/pi/weatherServer/app.js
+@midori -e Fullscreen -a http://localhost

@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+
+<html>
+  <head>
+  
+    <title>Meteo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="Fr"/>
+    <meta name="Author" lang="fr" content="Tanguy"/>
+    <meta name="Copyright" content="©Tanguy"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!--<meta http-equiv="refresh" content="3600;url=index.html"/>-->
+		
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materializ/css/materialize.min.css" media="screen,projection"/>
+	
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	
+	<!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  </head>
+  
+  
+  
+  
+  
+  <body> 
+  
+	<div class="row row1">
+	
+	   <div class="col s4 m4 l4">
+            <div class="card">
+                <div class="card-content moon">					
+						<!--<img id="img_earth">-->
+						<center><img id="img_moon"></center>				
+				</div>
+			</div> 
+		</div> 
+
+		<div class="col s4 m4 l4">
+            <div class="card">
+                <div class="card-content tmp">
+					Interieur: <div class="temp" id="tempint">0°</div>					
+					Exterieur: <div class="temp" id="tempext">0°</div>	
+					Chambre: <div class="temp" id="tempimpr">0°</div>
+				</div>
+			</div> 
+		</div>  		
+		
+	    <div class="col s4 m4 l4">
+            <div class="card">
+                <div class="card-content">
+					<div id="horloge"></div>
+					<canvas id="graph" style="width:100%; height:100px; border:1px solid #CCC; margin-top:5px;"></canvas>
+				</div>
+			</div> 
+		</div>  
+		
+	</div>
+	
+	 
+	<div class="row row2">
+	
+	
+	   <div class="col s12 m12 l12">
+            <div id="tt" class="card">
+			
+			<!--<center>
+			<span class="jour" id="j1">Lundi</span>
+			<span class="jour" id="j2">Mardi</span>
+			<span class="jour" id="j3">Mercredi</span>
+			<span class="jour" id="j4" style="display:none"  >Jeudi</span>
+			<span class="jour" id="j5" style="display:none"  >Vendredi</span>
+			<span class="jour" id="j6" style="display:none" >Samedi</span>
+			<span class="jour" id="j7">Dimanche</span>
+			</center>
+			-->
+		
+			<canvas id="graphPrev" style="width:100%; height:100%;"></canvas>	
+        
+			
+			</div> 
+		</div>  		
+		
+	
+	
+	
+	<!--
+	   <div class="col s3 m3 l3">
+            <div class="card">
+                <div class="card-content c1">	
+				
+					<span id="jour">Lundi</span>
+					<div class="date">
+						<span>8 Janvier</span>	
+						<br>
+						<span id="heure">16:47</span>
+					</div>
+					
+					<hr>	
+					
+					<span class="periode">Matin:</span><span class="periodeval" id="matin">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">Midi:</span><span class="periodeval" id="midi">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">soir:</span><span class="periodeval" id="soir">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">Nuit:</span><span class="periodeval" id="nuit">20</span><span class="periodeval">°</span><br><br>					
+					
+				</div>
+			</div> 
+		</div>  		
+		
+	    <div class="col s3 m3 l3">
+            <div class="card">
+                <div class="card-content c2">
+				
+					<span id="jour">Mardi</span>
+					<div class="date">
+						<span id="date">9 Janvier</span>	
+						<br>
+						<span id="heure">16:47</span>
+					</div>
+					
+					<hr>	
+					
+					<span class="periode">Matin:</span><span class="periodeval" id="matin">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">Midi:</span><span class="periodeval" id="midi">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">soir:</span><span class="periodeval" id="soir">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">Nuit:</span><span class="periodeval" id="nuit">20</span><span class="periodeval">°</span><br><br>					
+					
+				</div>
+			</div> 
+		</div>  
+		
+		<div class="col s3 m3 l3">
+            <div class="card">
+                <div class="card-content c3">
+					
+					<span id="jour">Mercredi</span>
+					<div class="date">
+						<span id="date">10 Janvier</span>	
+						<br>
+						<span id="heure">16:47</span>
+					</div>	
+					
+					<hr>	
+					
+					<span class="periode">Matin:</span><span class="periodeval" id="matin">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">Midi:</span><span class="periodeval" id="midi">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">soir:</span><span class="periodeval" id="soir">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">Nuit:</span><span class="periodeval" id="nuit">20</span><span class="periodeval">°</span><br><br>					
+										
+				</div>
+			</div> 
+		</div>  
+		
+		<div class="col s3 m3 l3">
+            <div class="card">
+                <div class="card-content c4">
+				
+					<span id="jour">Jeudi</span>
+					<div class="date">
+						<span id="date">11 Janvier</span>	
+						<br>
+						<span id="heure">16:47</span>
+					</div>
+					
+					<hr>
+					
+					<span class="periode">Matin:</span><span class="periodeval" id="matin">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">Midi:</span><span class="periodeval" id="midi">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">soir:</span><span class="periodeval" id="soir">20</span><span class="periodeval">°</span><br><br>
+					<span class="periode">Nuit:</span><span class="periodeval" id="nuit">20</span><span class="periodeval">°</span><br><br>					
+					
+				</div>
+			</div> 
+		</div>  
+		-->
+		
+	</div>
+	
+	 
+	<div class="row row3">
+	
+	   <div class="col s4 m4 l4">
+            <div class="card ">
+                <div class="card-content">
+					<div id="ping">Ping: 100 ms</div>
+				</div>
+			</div> 
+		</div>  		
+		
+	    <div class="col s4 m4 l4">
+            <div class="card ">
+                <div class="card-content">
+					<div id="sondeAlive">Sonde: 00:00 signal: 0</div>	
+				</div>
+			</div> 
+		</div>  
+		
+		 <div class="col s4 m4 l4">
+            <div class="card tte">               
+				<canvas id="pres" style="width:100%; height:100%;"></canvas>
+			</div> 
+		</div>  
+		
+	</div>
+  
+
+  <!--
+	 <div id="horloge"></div>	  
+	  
+     
+	 <div id="meteo">	 
+		<div id="today">
+			<script type='text/javascript' src='http://www.meteofrance.com/mf3-rpc-portlet/rest/vignettepartenaire/912010/type/VILLE_FRANCE/size/PAYSAGE_VIGNETTE'></script>
+		</div>		
+		<br>		 
+		<div id="week">
+			<div id="cont_OTEyMDF8NXwzfDF8NHwwMDAwMDB8MnxiZGJkYmR8Y3wx">
+				<div id="spa_OTEyMDF8NXwzfDF8NHwwMDAwMDB8MnxiZGJkYmR8Y3wx">
+					<a id="a_OTEyMDF8NXwzfDF8NHwwMDAwMDB8MnxiZGJkYmR8Y3wx" href="http://www.meteocity.com/france/draveil_v91201/" target="_blank" style="color:#333;text-decoration:none;">Météo Draveil</a> 
+				</div>
+				<script type="text/javascript" src="http://widget.meteocity.com/js/OTEyMDF8NXwzfDF8NHwwMDAwMDB8MnxiZGJkYmR8Y3wx"></script>
+			</div>
+		</div>		
+	 </div>-->
+	 
+	<!--<script src='d3.min.js'></script><div id='openweathermap-widget'></div>
+                    <script type='text/javascript'>
+                    window.myWidgetParam = {
+                        id: 31,
+                        cityid: 3020832,
+                        appid: 'e4426549d9d56a97c840d61bce1b1355',
+                        containerid: 'openweathermap-widget',
+                    };
+                    (function() {
+                        var script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.async = true;
+                        script.src = 'weather-widget-generator.js';
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(script, s);
+                    })();
+    </script>-->
+
+  
+  </body>
+  
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+	
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="materializ/js/materialize.min.js"></script>
+	
+</html>

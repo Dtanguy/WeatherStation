@@ -52,54 +52,55 @@ This is still a WIP,a lot of think have to be improve.
 - sudo apt-get update
 - sudo apt-get upgrade
 - sudo raspi-config => enable VNC, desktop, serial, change the nam and password and expand file system.
-<br>
+<br><br>
 - sudo apt-get install apache2 -y
 - sudo apt-get install php5 libapache2-mod-php5 -y
 - sudo chown -R pi:www-data /var/www
-<br>
+<br><br>
 - sudo iwlist wlan0 scan
 - sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
-network={
-    ssid="YourSSID"
-    psk="YourPSK"
-}
-<br>
+<br>network={
+<br>    ssid="YourSSID"
+<br>    psk="YourPSK"
+<br>}
+<br><br>
 - sudo apt-get install unclutter
 - sudo apt-get install git
-<br>
+<br><br>
 - sudo apt-get install screen 
 - sudo nano /boot/config.txt 
 - change enable_uart=0 to enable_uart=1
-<br>
+<br><br>
 - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 - sudo apt-get install -y nodejs
 - sudo apt-get install npm
-<br>
+<br><br>
 - sudo npm install forever -g (You can try whitout the -g but it doesn't work for me)
 - sudo apt-get install midori
 - sudo apt-get install xplanet
-<br>
+<br><br>
 - sudo nano /etc/lightdm/lightdm.conf
-xserver-command=X -s 0 dpms
-<br>
+<br>xserver-command=X -s 0 dpms
+<br><br>
 - sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart (or just copy the autostart file i put on this git)
-@point-rpi
-@xset s off
-@xset -dpms
-@xset s noblank
-@midori -e Fullscreen -a http://localhost
-<br>
+<br>@point-rpi
+<br>@xset s off
+<br>@xset -dpms
+<br>@xset s noblank
+<br>@midori -e Fullscreen -a http://localhost
+<br><br>
 - Copy the server floder in your home directory
 - Install it with npm install
 - Make veille.sh and init.sh usable with sudo chmod +x veille.sh and sudo chmod +x init.sh
 - Create Crontab with sudo crontab -e
-@reboot     /home/pi/init.sh
-0 22 * * *     /home/pi/veille.sh
-0 7 * * *     /home/pi/veille.sh 
-<br>
+<br>@reboot     /home/pi/init.sh
+<br>0 22 * * *     /home/pi/veille.sh
+<br>0 7 * * *     /home/pi/veille.sh 
+<br><br>
+- Put your API key in app.js.
 
 ##Arduino :
-Just upload the ArduinoReadSensors sketch, no library needed.
+Simply upload the ArduinoReadSensors sketch, no modification or library needed.
 
 ##NodeMCU :
 - Install nodeMCU library for arduino.

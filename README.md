@@ -120,3 +120,12 @@ Simply upload the ArduinoReadSensors sketch, no modification or library needed.
 - Install nodeMCU library for arduino.
 - In the nodeMCUsendData skecth change SSID and PSK.
 - Upload the sketch.
+
+
+##Usefull link :
+- Cron like for node.js: https://github.com/kelektiv/node-cron
+- Serial port for node.js: https://github.com/EmergingTechnologyAdvisors/node-serialport
+- Enable UART on RPI: http://spellfoundry.com/2016/05/29/configuring-gpio-serial-port-raspbian-jessie-including-pi-3/
+- An other projet of RPI dashbord, i hae learn about Xplanet here: http://www.magdiblog.fr/boa-pi-homedashscreen/1-raspberry-pi-home-dash-screen/
+- Usage of Forever: https://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever/
+- Nice: backgroundhttps://www.calm.com/ 

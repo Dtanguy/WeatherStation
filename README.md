@@ -1,6 +1,5 @@
-# WeatherStation
+# WeatherStation (/!\ Still WIP /!\)
 A 3D printed weather station, based on rpi2 and nodeMCU.<br>
-<p align="center">/!\ Still WIP</p>
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/p1.jpg">
@@ -23,18 +22,22 @@ Material used for the station :
 - 5V 2A regulator
 - Arduino (nano or minipro form small size). 
 - The 3D file are in the STL floder or on my thingiverse account: https:// 
-<br>
-<p align="center">
-	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/StationSchematic.png">
-</p>
-<br>
 
+<br>
 Material used for the wireless sensor :
 <br>
 - NodeMCU
 - Temperature sensor + resistor
 - A solar powered batterie (i use this one : https://www.amazon.fr/gp/product/B017W1MGMY/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)
 <br>
+
+#Wiring :
+##station :
+<p align="center">
+	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/StationSchematic.png">
+</p>
+<br>
+##sensor :
 <p align="center">
 	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/WirelessSensorSchematic.png">
 </p>

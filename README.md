@@ -75,8 +75,6 @@ sudo apt-get install midori
 sudo apt-get install xplanet
 
 sudo nano /etc/lightdm/lightdm.conf
-# add the following lines to the [SeatDefaults] section
-# don't sleep the screen
 xserver-command=X -s 0 dpms
 
 sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart (or just copy the autostart file i put on this git)

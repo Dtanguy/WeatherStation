@@ -3,8 +3,8 @@ extern "C" {
   #include "user_interface.h"
 }
 
-const char* ssid = "Bbox-A50A7EFB";
-const char* password = "FE7D44DF3D2D3717DA1C2D1214AE11";
+const char* ssid = "";
+const char* password = "";
 const char* host = "192.168.1.9";
 
 int nb_try = 0;

@@ -1,6 +1,7 @@
 # WeatherStation
 <br>
-A 3D printed weather station, based on rpi2 and nodeMCU.<br>
+A 3D printed weather station, based on rpi2 and nodeMCU. The weather data come from api.openweathermap and the temperature data from 3 sensor, one embeded in the station, one wireless in the garden using a nodeMCU and one from my 3D printer by the octoprintAPI<br>
+
 This is still a WIP,a lot of thin have to be improve. But it work.
 
 <p align="center">
@@ -19,14 +20,14 @@ This is still a WIP,a lot of thin have to be improve. But it work.
 - Wifi dougle.
 - Screen and screen controler with hdmi.
 - HDMI cable.
-- 5V 2A regulator
+- 5V 2A regulator.
 - Arduino (nano or minipro for small size). 
-- The 3D file are in the STL floder or on my thingiverse account: https:// 
+- The 3D file are in the STL floder or on my thingiverse account: http://www.thingiverse.com/Dtanguy/designs
 
 ##Material used for the wireless sensor :
-- NodeMCU
-- Temperature sensor + resistor
-- Solar powered batterie (https://www.amazon.fr/gp/product/B017W1MGMY/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)
+- NodeMCU.
+- Temperature sensor + resistor.
+- Solar powered batterie (http://amzn.com/B017W1MGMY).
 <br><br>
 
 #Wiring :

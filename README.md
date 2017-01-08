@@ -25,10 +25,10 @@ This is still a WIP, a lot of think have to be improve.
 - HDMI cable.
 - 5V 2A regulator.
 - Arduino (nano or minipro for small size). 
-- The 3D file are in the STL floder or on my thingiverse account: http://www.thingiverse.com/Dtanguy/designs
+- The 3D files are in the STL floder or on my thingiverse account: http://www.thingiverse.com/Dtanguy/designs
 <br>
 <p align="center">
-	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/p2.png" style="height: 500px;">
+	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/p2.png" style="height: 400px;">
 </p>
 
 
@@ -77,11 +77,11 @@ This is still a WIP, a lot of think have to be improve.
 <br><br>
 
 - sudo apt-get install screen 
-- sudo nano /boot/config.txt 
+- sudo nano /boot/config.txt
 - change enable_uart=0 to enable_uart=1
 <br><br>
 
-- curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+- curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
 - sudo apt-get install -y nodejs
 - sudo apt-get install npm
 <br><br>

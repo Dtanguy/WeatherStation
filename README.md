@@ -11,11 +11,11 @@ This is still a WIP, a lot of think have to be improve.
 	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/p1.jpg">
 </p>
 
-<!--<br>
+<br>
 <p align="center">
 	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/p2.png">
 </p>
-<br>-->
+
 
 #Hardware :
 ##Material used for the station :
@@ -126,6 +126,6 @@ Simply upload the ArduinoReadSensors sketch, no modification or library needed.
 - Cron like for node.js: https://github.com/kelektiv/node-cron
 - Serial port for node.js: https://github.com/EmergingTechnologyAdvisors/node-serialport
 - Enable UART on RPI: http://spellfoundry.com/2016/05/29/configuring-gpio-serial-port-raspbian-jessie-including-pi-3/
-- An other projet of RPI dashbord, i hae learn about Xplanet here: http://www.magdiblog.fr/boa-pi-homedashscreen/1-raspberry-pi-home-dash-screen/
+- An other projet of RPI dashbord: http://www.magdiblog.fr/boa-pi-homedashscreen/1-raspberry-pi-home-dash-screen/
 - Usage of Forever: https://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever/
 - Nice: backgroundhttps://www.calm.com/ 

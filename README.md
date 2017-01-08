@@ -1,10 +1,11 @@
-# WeatherStation
+#Weather Station
 <br>
-A 3D printed weather station, based on rpi2 and nodeMCU. 
-The weather data come from api.openweathermap and the temperature data from 3 sensor, 
-one embeded in the station, one wireless in the garden using a nodeMCU and one from my 3D printer by the octoprintAPI. It's mostly javascript (node.js on the server side and js for the kiosk).
+This project is a 3D printed weather station, based on rpi2 and nodeMCU. 
+The weather data come from the openweathermap API and the temperature data from 3 sensor. 
+The first sensor is embeded in the station, the second is in the garden connected in wifi using a nodeMCU and the last is a 3D printer headsensor thanks to Octoprint API. 
+It's mostly writen in javascript, node.js for the server side and materialize framerwork for the front.
 <br>
-This is still a WIP,a lot of thin have to be improve.
+This is still a WIP,a lot of think have to be improve.
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/p1.jpg">

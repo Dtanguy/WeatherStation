@@ -11,11 +11,11 @@ This is still a WIP, a lot of think have to be improve.
 	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/p1.jpg">
 </p>
 
-<br>
+<!--<br>
 <p align="center">
 	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/p2.png">
 </p>
-
+<br>-->
 
 #Hardware :
 ##Material used for the station :
@@ -26,6 +26,11 @@ This is still a WIP, a lot of think have to be improve.
 - 5V 2A regulator.
 - Arduino (nano or minipro for small size). 
 - The 3D file are in the STL floder or on my thingiverse account: http://www.thingiverse.com/Dtanguy/designs
+<br>
+<p align="center">
+	<img src="https://raw.githubusercontent.com/dtanguy/weatherstation/master/img/p2.png" style="height: 500px;">
+</p>
+
 
 ##Material used for the wireless sensor :
 - NodeMCU.

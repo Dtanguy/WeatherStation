@@ -74,12 +74,12 @@ function update() {
 	  //} else {
 		$("#ping").css('color', 'green');  
 	  //}
-	  
-	  //if (JSON.stringify(forecastJSON) != JSON.stringify(data.forecastJSON)){
+	   
+	  if (JSON.stringify(forecastJSON) != JSON.stringify(data.forecastJSON)){
 		  console.log(data.forecastJSON);
 		  forecastJSON = data.forecastJSON;
 		  initPrev();
-	  //}
+	  }
 	  
 	  //data.wifi_strength;	  
 	  //data.ping;		

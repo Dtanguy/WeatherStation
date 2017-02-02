@@ -44,15 +44,19 @@ port.on('data', function (data) {
 });
 
  
-var octoprintAPIKey = '';
+var octoprintAPIKey = '0B825C5C50D2499D91E84B15351E012E';
 function updateDataFromOctoprintAPI(){
-	request('http://192.168.1.61:5000/api/printer/tool?apikey=' + octoprintAPIKey, function (error, response, body) {
-		if (!error && response.statusCode == 200) {						 
-			tmpImpr = JSON.parse(body).tool0.actual-2;
-		}else{
-			console.log("Fail calling octoprint Api");
-		}
-	});
+	try {
+		request('http://192.168.1.61:5000/api/printer/tool?apikey=' + octoprintAPIKey, function (error, response, body) {
+			if (!error && response.statusCode == 200) {						 
+				tmpImpr = JSON.parse(body).tool0.actual-2;
+			}else{
+				console.log("Fail calling octoprint Api");
+			}
+		});
+	} catch (err) {
+		console.log("Error Xplanet");
+	}
 }
 
 var xplanetCron = schedule.scheduleJob('*/10 * * * * *', function(){
@@ -72,35 +76,39 @@ var xplanetCron = schedule.scheduleJob('*/1 * * * *', function(){
 	}
 });
 
-var weatherAPIKey = '';
+var weatherAPIKey = 'e4426549d9d56a97c840d61bce1b1355';
 var dailyJSON = '';
 var forecastJSON = '';
 var weatherJSON = '';
 function updateDataFromAPI(){	
-	console.log("update weather");
-	/*request('http://api.openweathermap.org/data/2.5/forecast/daily?q=Paris,fr&appid=' + weatherAPIKey, function (error, response, body) {
-		if (!error && response.statusCode == 200) {			
-			dailyJSON = JSON.parse(body);
-		}else{
-			console.log("Fail calling daily Weather Api");
-		}
-	});*/
-		
-	request('http://api.openweathermap.org/data/2.5/forecast?q=Paris,fr&appid=' + weatherAPIKey, function (error, response, body) {
-		if (!error && response.statusCode == 200) {
-		  forecastJSON = JSON.parse(body);
-		}else{
-			console.log("Fail calling forecast Weather Api");
-		}
-	});
-	/*	
-	request('http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=' + weatherAPIKey, function (error, response, body) {
-		if (!error && response.statusCode == 200) {		 
-		  weatherJSON = JSON.parse(body);
-		}else{
-			console.log("Fail calling weather Weather Api");
-		}
-	});*/
+	try {
+		console.log("update weather");
+		/*request('http://api.openweathermap.org/data/2.5/forecast/daily?q=Draveil,fr&appid=' + weatherAPIKey, function (error, response, body) {
+			if (!error && response.statusCode == 200) {			
+				dailyJSON = JSON.parse(body);
+			}else{
+				console.log("Fail calling daily Weather Api");
+			}
+		});*/
+			
+		request('http://api.openweathermap.org/data/2.5/forecast?q=Draveil,fr&appid=' + weatherAPIKey, function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+			  forecastJSON = JSON.parse(body);
+			}else{
+				console.log("Fail calling forecast Weather Api");
+			}
+		});
+		/*	
+		request('http://api.openweathermap.org/data/2.5/weather?q=Draveil,fr&appid=' + weatherAPIKey, function (error, response, body) {
+			if (!error && response.statusCode == 200) {		 
+			  weatherJSON = JSON.parse(body);
+			}else{
+				console.log("Fail calling weather Weather Api");
+			}
+		});*/
+	} catch (err) {
+		console.log("Error Xplanet");
+	}
 }
 var weatherAPICron = schedule.scheduleJob('0 */1 * * *', function(){
 	updateDataFromAPI();
@@ -118,6 +126,7 @@ function trucTmp(tmp){
 
 var todo = '';
 var server = http.createServer(function(req, res) {
+	try {
 		  
 		var params = querystring.parse(url.parse(req.url).query);
 		var page = url.parse(req.url).pathname;		  
@@ -176,14 +185,17 @@ var server = http.createServer(function(req, res) {
 			};  
 
 			todo = '';
-		
+		 
 		}/*else{
 			data = {succes: false};
 		}*/
 		
 		var json = JSON.stringify(data);  
 		res.end(json);
-
+  
+	} catch (err) {
+		console.log("Error Answer request");
+	}
 });
 
 server.listen(8085);

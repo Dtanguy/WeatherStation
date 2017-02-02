@@ -52,11 +52,64 @@ This is still a WIP, a lot of think have to be improve.
 
 #Installation :
 ##Raspberry pi 2 :
+###From fullpageos (easyer):
+
+- get .img here : https://guysoft.wordpress.com/2015/10/17/fullpageos-out-of-the-box-kiosk-mode-for-the-raspberrypi/
+- Install fullpageos on sd card
+- In /boot change fullpageos.txt
+- In /boot change fullpageos-network.txt
+<br><br>
+
+- sudo apt-get purge chromium-browser
+- sudo apt-get install midori
+- sudo nano ~/scripts/run_onepageos
+- remplace the line with chrome by "midori -e Fullscreen -a $(head -n 1 /boot/fullpageos.txt)"
+<br><br>
+
+- sudo raspi-config => enable VNC, desktop, serial, change the name, password, expand the file system.
+- sudo apt-get update
+- sudo apt-get upgrade
+<br><br>
+
+- sudo iwlist wlan0 scan
+- sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+<br>network={
+<br>&emsp;&emsp;ssid="YourSSID"
+<br>&emsp;&emsp;psk="YourPSK"
+<br>}
+<br><br>
+
+- sudo apt-get install screen 
+- sudo nano /boot/config.txt
+- change enable_uart=0 to enable_uart=1
+<br><br>
+
+- curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
+- sudo apt-get install -y nodejs
+- sudo apt-get install npm
+- sudo npm install forever -g (You can try whitout the -g but it doesn't work for me)
+<br><br>
+
+- sudo apt-get install xplanet
+<br><br>
+
+- Copy the server floder in your home directory
+- Install it with npm install
+- Make veille.sh and init.sh usable with sudo chmod +x veille.sh and sudo chmod +x init.sh
+- Create Crontab with sudo crontab -e
+<br>@reboot     /home/pi/init.sh
+<br>@reboot     forever start /home/pi/weatherServer/app.js
+<br>0 22 * * *     /home/pi/veille.sh
+<br>0 7 * * *     /home/pi/reveil.sh 
+<br><br>
+
+
+###From raspbian:
 
 - Install raspbian-jessie on the sd card of the rip2 (i use the .img from 2016-05-10)
 - sudo apt-get update
 - sudo apt-get upgrade
-- sudo raspi-config => enable VNC, desktop, serial, change the nam and password and expand file system.
+- sudo raspi-config => enable VNC, desktop, serial, change the name and password and expand file system.
 <br><br>
 
 - sudo apt-get install apache2 -y
